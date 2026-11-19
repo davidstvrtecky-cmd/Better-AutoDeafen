@@ -1,0 +1,99 @@
+{
+	"geode": "5.11.2",
+	"gd": {
+		"win": "2.2081"
+	},
+	"id": "blenderanimat.better-autodeafen",
+	"description": "A fork of AutoDeafen (by Lynxdeer) with persistent key caching, StartPos auto-off, undeafen on restart/leave, and an in-level Advanced settings menu.",
+	"tags": ["enhancement", "utility"],
+	"links": {
+		"source": "https://github.com/davidstvrtecky-cmd/Better-AutoDeafen"
+	},
+	"name": "Better AutoDeafen",
+	"version": "v1.0.0",
+	"developer": "Blenderanimat",
+	"dependencies": { "geode.node-ids": ">=v1.22.0" },
+	"incompatibilities": {
+		"lynxdeer.autodeafen": {
+			"version": "*",
+			"importance": "breaking"
+		}
+	},
+	"settings": {
+		"default_enabled": {
+			"name": "Enabled By Default",
+			"type": "bool",
+			"default": false,
+			"description": "Whether Better AutoDeafen is <co>enabled by default</c> when you load into a level for the first time."
+		},
+		"default_percentage": {
+			"name": "Default Percentage",
+			"control": { "input": true },
+			"type": "float",
+			"default": 50,
+			"min": 0,
+			"max": 100,
+			"description": "The <co>default percentage to deafen at</c> when you load into a level for the first time."
+		},
+		"practice": {
+			"name": "Enabled In Practice Mode",
+			"type": "bool",
+			"default": false,
+			"description": "Whether Better AutoDeafen should be enabled during practice mode."
+		},
+		"disable_on_startpos": {
+			"name": "Disable On StartPos",
+			"type": "bool",
+			"default": true,
+			"description": "Automatically disables Better AutoDeafen while playing from a <cj>StartPos</c>."
+		},
+		"undeafen_on_pause": {
+			"name": "Undeafen On Pause",
+			"type": "bool",
+			"default": false,
+			"description": "Automatically undeafens when you pause mid-run and re-deafens when you resume."
+		},
+		"undeafen_delay": {
+			"name": "Death/Win Undeafen Delay (s)",
+			"control": { "input": true },
+			"type": "float",
+			"default": 0,
+			"min": 0,
+			"max": 10,
+			"description": "Optional delay in seconds before undeafening after you die or beat a level."
+		},
+		"mute_only": {
+			"name": "Mute-Only Mode",
+			"type": "bool",
+			"default": false,
+			"description": "Mutes your Discord microphone instead of full deafen so you can still hear your friends."
+		},
+		"near_pb_mode": {
+			"name": "Near Personal Best Mode",
+			"type": "bool",
+			"default": false,
+			"description": "Automatically deafens when you get within <cg>PB Offset %</c> of your personal best on uncompleted levels."
+		},
+		"pb_offset": {
+			"name": "Personal Best Offset (%)",
+			"control": { "input": true },
+			"type": "float",
+			"default": 10,
+			"min": 0,
+			"max": 100,
+			"description": "How many percent before your Personal Best to deafen when <cg>Near Personal Best Mode</c> is enabled."
+		},
+		"show_indicator": {
+			"name": "On-Screen Status Indicator",
+			"type": "bool",
+			"default": true,
+			"description": "Shows a small unobtrusive status label in the top-left corner while playing."
+		},
+		"undeafen_on_exit": {
+			"name": "Undeafen On Game Exit",
+			"type": "bool",
+			"default": true,
+			"description": "Automatically undeafens if you close Geometry Dash while deafened."
+		}
+	}
+}

@@ -1,0 +1,15 @@
+# v1.0.0
+- Initial release of **Better AutoDeafen** by **Blenderanimat** (fork of AutoDeafen by Lynxdeer)
+- Added dedicated persistent key cache at `%APPDATA%\BetterAutoDeafen\keys.json` with atomic writes and instant Geode save flushing
+- Fixed Discord OAuth token refresh (`&refresh_token=` instead of `&code=`), 32-bit timestamp truncation, and duplicate port 8000 binding
+- Added automatic token refresh on rejected tokens & automatic IPC reconnect/retry
+- Added an in-level **Advanced** settings popup (accessible from the pause menu popup) with all quality-of-life controls:
+  - Disable on StartPos toggle
+  - Undeafen on Pause (re-deafens on resume)
+  - Death/Win Undeafen Delay (seconds)
+  - Mute-Only Mode
+  - Near Personal Best Mode + PB Offset (%)
+  - On-Screen Status Indicator
+  - Undeafen on Game Exit
+  - Test Deafen, Open Cache folder, and Clear Keys buttons
+- Automatically undeafens on attempt restart and when leaving a level
