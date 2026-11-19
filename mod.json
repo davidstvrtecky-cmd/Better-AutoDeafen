@@ -15,7 +15,7 @@
 	"dependencies": { "geode.node-ids": ">=v1.22.0" },
 	"incompatibilities": {
 		"lynxdeer.autodeafen": {
-			"version": "*",
+			"version": ">=v0.0.0",
 			"importance": "breaking"
 		}
 	},
